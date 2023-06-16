@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <H1>programar tabuada</H1>
+  <form>
+  <p>numero:
+    <input type="number"id="inNumero" required>
+    </p>
+    <input type="submit" value="mostrar tabuada"> 
+  </form>
+  <pre></pre>
+  <script>
+  const frm = document.querySelector("form")
+  const resp = document.querySelector("pre")
+  
+  frm.addEventListener("submit", (e) =>{
+     e.preventDefault()
+    const numero = Number(frm.inNumero.value)
+    let resposta = ""
+    for (let i = 1; i <=10; i++){
+  resposta = resposta + numero + "x" + i + "=" + (numero* i) + "\n"
+    }
+    resp.innerText = resposta
+  })
+  </script>
+</body>
+
+</html>
